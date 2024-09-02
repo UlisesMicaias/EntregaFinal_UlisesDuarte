@@ -58,10 +58,6 @@ function cardsProductosHome(cafes) {
 
 // recopila mediante fetch y async/await los datos de la API coffe y gracias a eso los usa y renderiza los cafes
 const mostrarProductos = async () =>{
-    const precioTotalElem = document.getElementById('precio-total');
-    if (precioTotalElem) {
-        precioTotalElem.remove();
-    } 
     try {
         const response = await fetch('https://fake-coffee-api.vercel.app/api')
         const data = await response.json();
